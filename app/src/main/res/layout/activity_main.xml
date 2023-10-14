@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#43A0C9"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- Horizontal LinearLayout for Text and Image -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/photoOfTheDay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:text="Random Photo of the Day:"
+            android:textSize="18sp"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/headerImageView"
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/taj" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/averageCaloriesTextView"
+        android:layout_width="match_parent"
+        android:background="#05256D"
+        android:layout_height="30dp"
+        android:textAlignment="center"
+        android:text="Average Calories: 0.00"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/addNewFoodButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Food" />
+
+</LinearLayout>
